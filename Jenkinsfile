@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'golang:1.22.4-alpine3.20' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Clone') {
             steps {
-                sh 'go version'
+                git 'https://github.com/cuonghqRose/flask-docker.git'
             }
         }
     }
