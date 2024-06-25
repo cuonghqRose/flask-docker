@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM nginx
 WORKDIR /app
 COPY . .
 RUN yarn install --production
