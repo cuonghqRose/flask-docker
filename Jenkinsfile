@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent agent1
     stages {
         stage('Clone') {
             steps {
@@ -11,7 +11,6 @@ pipeline {
                 withDockerRegistry(credentialsId: 'hqcuongvt2012', url: 'https://index.docker.io/v1/') {
                   sh 'docker build -t hqcuong2012/cuonghq:v1 .'
                   sh 'docker push hqcuong2012/cuonghq:v1'
-                  sh 'echo a'
                 }
             }
         }
