@@ -11,6 +11,7 @@ pipeline {
                 withDockerRegistry(credentialsId: 'hqcuongvt2012', url: 'https://index.docker.io/v1/') {
                   sh 'docker build -t hqcuong2012/cuonghq:v1 .'
                   sh 'docker push hqcuong2012/cuonghq:v1'
+                  sh 'echo a'
                 }
             }
         }
